@@ -2,38 +2,65 @@
 // Day: Monday
 
 public class Q3 {
-    // Not done right now...
-    public static int kthMinVal(int arr[], int k){
-        int min = Integer.MAX_VALUE;
-        int count = 0;
-        for(int val : arr){
-            if(val < min){
-                min = val;
-                count++;
+    public static void sort(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr.length-i-1; j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
             }
-            if(count == k && count != 0)
-                return min;
         }
-        return min;
+    }
+
+    public static int kthMinVal(int arr[], int k){
+        // int min = Integer.MAX_VALUE;
+        // for(int count=0; count <= k; count++){
+        //     int curr = Integer.MAX_VALUE;
+        //     for(int i : arr){
+        //         if(i < curr && i > min){
+        //             curr = i;
+        //         }
+        //     }
+        //     min = curr;
+        // }
+        // return min;
+
+        if(k <= arr.length){
+            return arr[k-1];
+        }
+        else{
+            return -1;
+        }
     }
 
     public static int kthMaxVal(int arr[], int k){
-        int max = Integer.MIN_VALUE;
-        int count = 0;
-        for(int val : arr){
-            if(val > max){
-                max = val;
-                count++;
-            }
-            if(count == k && count != 0)
-                return max;
+        // int max = Integer.MIN_VALUE;
+        // for(int count=0; count <= k; count++){
+        //     int curr = Integer.MIN_VALUE;
+        //     for(int i : arr){
+        //         if(i > curr && i < max){
+        //             curr = i;
+        //         }
+        //     }
+        //     max = curr;
+        // }
+        // return max;
+
+        int n = arr.length;
+        if(k <= n){
+            return arr[n-k];
         }
-        return max;
+        else{
+            return -1;
+        }
     }
 
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5,6,7,8,9};
         int k = 3;
+        sort(arr);
         System.out.println(kthMinVal(arr, k));
         System.out.println(kthMaxVal(arr, k));
     }
