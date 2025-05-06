@@ -1,6 +1,7 @@
 // Date: 05/05/2025
 // Day: Monday
 
+// 1. Find the maximum and minimum element in an array
 public class Q1{
     public static int minVal(int arr[]){
         int min = Integer.MAX_VALUE;

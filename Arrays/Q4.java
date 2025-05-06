@@ -1,6 +1,7 @@
 // Date: 06/05/2025
 // Day: Tuesday
 
+// 4. Sort an array of 0s, 1s and 2s (Dutch National Flag Problem)
 public class Q4 {
     public static void sort(int arr[]){
         int numCount[] = {0,0,0};

@@ -1,6 +1,7 @@
 // Date: 05/05/2025
 // Day: Monday
 
+// 3. Find the 'Kth' max and min element of an array
 public class Q3 {
     public static void sort(int arr[]){
         for(int i=0; i<arr.length; i++){

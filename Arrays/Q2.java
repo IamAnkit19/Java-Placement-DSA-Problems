@@ -1,6 +1,7 @@
 // Date: 05/05/2025
 // Day: Monday
 
+// 2. Reverse an array in place
 public class Q2 {
     public static void rev(int arr[]){
         int l = 0;
