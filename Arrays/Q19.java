@@ -15,18 +15,33 @@ public class Q19{
         }
     }
 
-    // Not done yet...
     public static void merge(int arr1[], int arr2[]){
-        for(int i=0; i<arr1.length; i++){
-            
+        for(int i = arr2.length-1; i>=0; i--){
+            int j = arr1.length-1;
+            if(arr2[i] < arr1[j]){
+                int temp = arr1[j];
+                while(j > 0 && arr1[j] > arr2[i]){
+                    arr1[j] = arr1[j-1];
+                    j--;
+                }
+                arr1[j] = arr2[i];
+                arr2[i] = temp;
+            }
         }
     }
-
+    
     public static void main(String[] args) {
         int arr1[] = {1,2,3,5,6,7,8,9};
         int arr2[] = {1,6,3,8,9,5};
         sort(arr1);
         sort(arr2);
         merge(arr1, arr2);
+        for(int val : arr1){
+            System.out.print(val+" ");
+        }
+        System.out.println();
+        for(int val : arr2){
+            System.out.print(val+" ");
+        }
     }
 }
