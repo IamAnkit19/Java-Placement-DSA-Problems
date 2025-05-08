@@ -1,5 +1,5 @@
-// Date: 07/05/2025
-// Day: Wednesday
+// Date: 08/05/2025
+// Day: Thursday
 
 // 24. Print all permutations of a string
 public class Q24{      
@@ -14,13 +14,28 @@ public class Q24{
     //     }
     // }
 
-    // Not done yet...
-    public static void permutations(String s){
-        
+    public static void permutations(int i, char str[]){
+        if(i == str.length){
+            for(int j = 0; j < str.length; j++){
+                System.out.print(str[j]);
+            }
+            System.out.print(" ");
+            return;
+        }
+        for(int idx = i; idx < str.length; idx++){
+            char temp = str[idx];
+            str[idx] = str[i];
+            str[i] = temp;
+            permutations(idx + 1, str);
+            temp = str[idx];
+            str[idx] = str[i];
+            str[i] = temp;
+        }
     }
     
     public static void main(String[] args) {
         String s = "Ankit";
-        permutations(s);
+        char str[] = s.toCharArray();
+        permutations(0,str);
     }
 }
