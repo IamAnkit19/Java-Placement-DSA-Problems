@@ -1,5 +1,5 @@
-// Date: 08/05/2025
-// Day: Thursday
+// Date: 09/05/2025
+// Day: Friday
 
 // 26. Count and say problem
 public class Q26{      
