@@ -13,11 +13,26 @@ public class Q7{
         }
     }
 
+    public static void revRotate(int arr[], int k){
+        for(int count = 0; count < k; count++){
+            int temp = arr[arr.length-1];
+            for(int i=arr.length-1; i>0; i--){
+                arr[i] = arr[i-1];
+            }
+            arr[0] = temp;
+        }
+    }
+
     public static void main(String[] args) {
         int arr[] = {5,3,-8,6,9,-3,-2,4,-1};
         rotate(arr, 3);
         for(int i : arr){
-            System.out.println(i);
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        revRotate(arr, 3);
+        for(int i : arr){
+            System.out.print(i + " ");
         }
     }
 }
