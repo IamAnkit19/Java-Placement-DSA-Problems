@@ -1,5 +1,5 @@
-// Date: 21/05/2025
-// Day: Wednesday
+// Date: 22/05/2025
+// Day:Thursday
 
 // 50. Boolean Matrix problem (set row/column to 1 if any element is 1)
 
